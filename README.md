@@ -12,6 +12,7 @@ The site is ready for public hosting on Vercel. It does not depend on localhost,
 - `assets/coastal-hero.png` - coastal hero background
 - `assets/elizabeth-smith-portrait.jpg` - Elizabeth portrait
 - `vercel.json` - Vercel static hosting config
+- `.vercelignore` - prevents docs validation files from taking over the Vercel static deployment
 - `docs.json` - Mintlify-compatible metadata with a valid `mint` theme
 - `.mintignore` - keeps generated zip/folder artifacts out of docs deployment
 - `ASSISTANT.md` - docs page required by the docs navigation
@@ -22,12 +23,15 @@ This project includes a valid `docs.json` because the deployment system expects 
 
 The `theme` value must stay set to `mint`. Valid themes include `mint`, `maple`, `palm`, `willow`, `linden`, `almond`, `aspen`, `luma`, and `sequoia`.
 
+For Vercel, the actual public site is still the custom static page at `index.html`. The `.vercelignore` file excludes `docs.json`, `ASSISTANT.md`, and `.mintignore` from the Vercel deployment so the docs page does not replace the QR landing page.
+
 The deployable root should contain only:
 
 ```text
 assets/
 .gitignore
 .mintignore
+.vercelignore
 ASSISTANT.md
 docs.json
 index.html

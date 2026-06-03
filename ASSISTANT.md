@@ -2,6 +2,8 @@
 
 Trusted for Results. Known for Relationships.
 
+This repository's public QR landing page is the custom static site at `index.html`. If a docs platform displays this page, use the deployed site root URL to open the full red/cream mobile landing page design.
+
 Elizabeth Smith is a top-producing Realtor and partner of the Willis & Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the Merrimack Valley.
 
 ## Why Clients Choose Elizabeth
