@@ -1,9 +1,0 @@
-{
-  "name": "elizabeth-smith-qr-landing-page",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Static QR landing page for Elizabeth Smith and Willis & Smith Group.",
-  "scripts": {
-    "build": "echo Static site: no build step required"
-  }
-}
