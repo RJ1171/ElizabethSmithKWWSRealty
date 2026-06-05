@@ -24,7 +24,7 @@ Proven success backed by strong sales and satisfied clients.
 
 - $440M Closed Volume, 2014-2026
 - 539 Closed Units, 2014-2026
-- 610 Estimated Unique Transactions
+- 1,022 Estimated Unique Transactions
 - 104% Average List-to-Sale Ratio
 - +$262K Average Price Advantage vs. MLS
 - 300+ Client Reviews
@@ -33,7 +33,7 @@ Proven success backed by strong sales and satisfied clients.
 ## Outperforms the Market
 
 - List/Sale Avg. Ratio: 104% vs. 98%
-- Avg. List Price: $611,000
+- Avg. List Price: $825K
 - MLS Average: $349,000
 - Advantage: +$262,000
 
