@@ -302,12 +302,15 @@ h3 {
 }
 
 .stat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
 .stat-card {
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 5px);
   min-height: 144px;
   display: flex;
   flex-direction: column;
@@ -592,10 +595,12 @@ address a {
   }
 
   .stat-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
   }
 
   .stat-card {
+    flex-basis: calc(25% - 10px);
+    max-width: calc(25% - 8px);
     min-height: 170px;
   }
 
