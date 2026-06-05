@@ -1,159 +1,235 @@
-# Elizabeth Smith | Willis & Smith Group QR Landing Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis & Smith Group.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elizabeth Smith | Willis &amp; Smith Group">
+  <meta property="og:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
+  <meta property="og:image" content="/assets/coastal-hero.png">
+  <meta property="og:site_name" content="Elizabeth Smith | Willis &amp; Smith Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elizabeth Smith | Willis &amp; Smith Group">
+  <meta name="twitter:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
+  <meta name="twitter:image" content="/assets/coastal-hero.png">
+  <title>Elizabeth Smith | Willis &amp; Smith Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero section-red-dots" aria-labelledby="hero-title">
+      <!-- Replace assets/coastal-hero.png with the final coastal/background image from the printed brochure if available. -->
+      <div class="hero__image" role="img" aria-label="Coastal luxury real estate scene"></div>
+      <div class="hero__content">
+        <p class="brand-kicker">Willis &amp; Smith</p>
+        <div class="portrait">
+          <img src="assets/elizabeth-smith-portrait.jpg" alt="Portrait of Elizabeth Smith">
+        </div>
+        <h1 id="hero-title">Elizabeth Smith</h1>
+        <p class="hero__subtitle">Trusted for Results. Known for Relationships.</p>
+        <div class="button-row" aria-label="Primary contact links">
+          <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
+          <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
+          <a class="button button--outline" href="https://www.instagram.com/willisandsmith/" target="_blank" rel="noopener" aria-label="Follow Willis and Smith Group on Instagram">Instagram</a>
+        </div>
+      </div>
+    </section>
 
-This is a static, mobile-first QR landing page for Elizabeth Smith and the Willis & Smith Group.
+    <section class="panel intro" aria-labelledby="why-list">
+      <p class="script-label">Why List With Elizabeth</p>
+      <h2 id="why-list">Trusted guidance with a personal touch.</h2>
+      <p>Elizabeth Smith combines trusted guidance, market expertise, and a personal approach to make every client feel supported through every step of the real estate journey.</p>
+    </section>
 
-The site is ready for public hosting on Vercel. It does not depend on localhost, a local server, or file paths from one computer.
+    <section class="section" aria-labelledby="about">
+      <div class="card card--center">
+        <p class="eyebrow">About Elizabeth</p>
+        <h2 id="about">Local expertise. Proven care.</h2>
+        <p>Elizabeth Smith is a top-producing Realtor and partner of the Willis &amp; Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the North Shore area.</p>
+      </div>
+    </section>
 
-## Project Files
+    <section class="section" aria-labelledby="clients-choose">
+      <div class="section-heading">
+        <p class="script-label">Why Clients Choose Elizabeth</p>
+        <h2 id="clients-choose">A polished process from first conversation to closing.</h2>
+      </div>
+      <div class="feature-list">
+        <article class="feature-card">
+          <span class="feature-card__icon">01</span>
+          <div>
+            <h3>Negotiation</h3>
+            <p>Strategic, confident, and focused on protecting your best interests.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">02</span>
+          <div>
+            <h3>Marketing</h3>
+            <p>Elevated marketing designed to make every listing stand out.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">03</span>
+          <div>
+            <h3>Communication</h3>
+            <p>Responsive, transparent, and supportive every step of the way.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">04</span>
+          <div>
+            <h3>Results</h3>
+            <p>Proven success backed by strong sales and satisfied clients.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-- `index.html` - single-page landing page
-- `styles.css` - responsive mobile-first styling
-- `script.js` - small sticky CTA behavior
-- `assets/coastal-hero.png` - coastal hero background
-- `assets/elizabeth-smith-portrait.jpg` - Elizabeth portrait
-- `vercel.json` - Vercel static hosting config
-- `.vercelignore` - prevents docs validation files from taking over the Vercel static deployment
-- `docs.json` - Mintlify-compatible metadata with a valid `mint` theme
-- `.mintignore` - keeps generated zip/folder artifacts out of docs deployment
-- `ASSISTANT.md` - docs page required by the docs navigation
+    <section class="trust" aria-label="Review summary">
+      <div class="stars" aria-label="Five star rating">&starf;&starf;&starf;&starf;&starf;</div>
+      <p class="trust__count">Over 300 reviews</p>
+      <p class="trust__source">Via Zillow and Realtor.com</p>
+    </section>
 
-## Important: docs.json
+    <section class="section stats-section" aria-labelledby="stats">
+      <div class="section-heading">
+        <p class="script-label">Proven Stats</p>
+        <h2 id="stats">Results that stand out.</h2>
+      </div>
+      <div class="stat-grid">
+        <article class="stat-card">
+          <strong>$440M+</strong>
+          <span>Closed Sales Volume</span>
+          <small>2014-2026</small>
+        </article>
+        <article class="stat-card">
+          <strong>539</strong>
+          <span>Closed Units</span>
+          <small>2014-2026</small>
+        </article>
+        <article class="stat-card">
+          <strong>610</strong>
+          <span>Estimated Unique Transactions</span>
+          <small>Across buyer and listing sides</small>
+        </article>
+        <article class="stat-card">
+          <strong>104%</strong>
+          <span>Average List-to-Sale Ratio</span>
+          <small>Outperforming the market</small>
+        </article>
+        <article class="stat-card">
+          <strong>+$262K</strong>
+          <span>Average Price Advantage</span>
+          <small>Compared with MLS average</small>
+        </article>
+        <article class="stat-card">
+          <strong>300+</strong>
+          <span>Client Reviews</span>
+          <small>Via Zillow and Realtor.com</small>
+        </article>
+        <article class="stat-card">
+          <strong>20+</strong>
+          <span>Years of Experience</span>
+          <small>Serving the North Shore area</small>
+        </article>
+      </div>
+    </section>
 
-This project includes a valid `docs.json` because the deployment system expects it.
+    <section class="section" aria-labelledby="market">
+      <div class="comparison-card">
+        <p class="script-label">Outperforms the Market</p>
+        <h2 id="market">A measurable advantage.</h2>
+        <div class="ratio-row">
+          <div>
+            <span>List/Sale Avg. Ratio</span>
+            <strong>104%</strong>
+            <small>Elizabeth</small>
+          </div>
+          <div>
+            <span>Market Avg.</span>
+            <strong>98%</strong>
+            <small>MLS</small>
+          </div>
+        </div>
+        <dl class="market-list">
+          <div>
+            <dt>Avg. List Price</dt>
+            <dd>$611,000</dd>
+          </div>
+          <div>
+            <dt>MLS Average</dt>
+            <dd>$349,000</dd>
+          </div>
+          <div class="advantage">
+            <dt>Advantage</dt>
+            <dd>+$262,000</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-The `theme` value must stay set to `mint`. Valid themes include `mint`, `maple`, `palm`, `willow`, `linden`, `almond`, `aspen`, `luma`, and `sequoia`.
+    <section class="section deal-section" aria-labelledby="deal-mix">
+      <div class="section-heading">
+        <p class="script-label">Deal Mix</p>
+        <h2 id="deal-mix">Balanced experience across every side of the table.</h2>
+      </div>
+      <div class="deal-total">
+        <strong>163</strong>
+        <span>total transactions</span>
+      </div>
+      <div class="deal-bars" aria-label="Transaction breakdown">
+        <article class="deal-card">
+          <div class="deal-card__top">
+            <h3>Buyer-side</h3>
+            <span>61</span>
+          </div>
+          <div class="bar" style="--bar: 37%;"></div>
+          <p>$85M volume</p>
+        </article>
+        <article class="deal-card">
+          <div class="deal-card__top">
+            <h3>Listing-side</h3>
+            <span>83</span>
+          </div>
+          <div class="bar" style="--bar: 51%;"></div>
+          <p>$130M volume</p>
+        </article>
+      </div>
+    </section>
 
-For Vercel, the actual public site is still the custom static page at `index.html`. The `.vercelignore` file excludes `docs.json`, `ASSISTANT.md`, and `.mintignore` from the Vercel deployment so the docs page does not replace the QR landing page.
+    <section class="closing section-red-dots" aria-labelledby="closing">
+      <p class="script-label">Ready to make your next move?</p>
+      <h2 id="closing">Work with a trusted local expert.</h2>
+      <p>Work with a trusted local expert who combines market knowledge, strong results, and a relationship-first approach.</p>
+      <div class="button-row">
+        <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
+        <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
+        <a class="button button--outline" href="https://www.instagram.com/willisandsmith/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
 
-The deployable root should contain only:
+    <footer class="contact" aria-labelledby="contact">
+      <h2 id="contact">Elizabeth Smith</h2>
+      <p>Willis &amp; Smith Group</p>
+      <address>
+        <a href="tel:+19783020824">(978) 302-0824</a>
+        <a href="mailto:elizabethsmith@kw.com">elizabethsmith@kw.com</a>
+        <a href="https://www.instagram.com/willisandsmith/" target="_blank" rel="noopener">@ElizabethSmith</a>
+        <a href="https://www.instagram.com/willisandsmith/" target="_blank" rel="noopener">@WillisAndSmithGroup</a>
+      </address>
+    </footer>
+  </main>
 
-```text
-assets/
-.gitignore
-.mintignore
-.vercelignore
-ASSISTANT.md
-docs.json
-index.html
-README.md
-script.js
-styles.css
-vercel.json
-```
+  <nav class="sticky-cta" aria-label="Sticky contact actions">
+    <a href="tel:+19783020824">Call</a>
+    <a href="mailto:elizabethsmith@kw.com">Email</a>
+  </nav>
 
-## Functional Links
-
-- Phone buttons use `tel:+19783020824`
-- Email buttons use `mailto:elizabethsmith@kw.com`
-- Instagram buttons link to `https://www.instagram.com/willisandsmith/`
-
-## Deploy to Vercel
-
-### 1. Push Code to GitHub
-
-Create a new GitHub repository, then upload the contents of this folder.
-
-The repository root should contain:
-
-```text
-index.html
-styles.css
-script.js
-vercel.json
-docs.json
-ASSISTANT.md
-.mintignore
-assets/
-```
-
-### 2. Connect the Repo to Vercel
-
-1. Go to `https://vercel.com`.
-2. Sign in or create an account.
-3. Click `Add New...` then `Project`.
-4. Import the GitHub repository.
-5. Use these exact settings:
-   - Framework Preset: `Other`
-   - Build Command: leave empty
-   - Output Directory: leave empty
-   - Root Directory: `.` or the folder containing `index.html`
-7. Click `Deploy`.
-
-If Vercel still tries to run a docs/Next.js build, delete the existing Vercel project and re-import the repo with Framework Preset set to `Other`, or clear the project Build Command in Vercel Project Settings.
-
-### 3. Copy the Live Production URL
-
-After deployment, Vercel will provide a public HTTPS URL, usually like:
-
-```text
-https://your-project-name.vercel.app
-```
-
-Open that URL on a phone and confirm:
-
-- The page loads over HTTPS.
-- The portrait image loads.
-- The coastal hero image loads.
-- CSS styling loads.
-- Call and email buttons work.
-- Instagram opens the Willis & Smith Instagram page.
-- The layout looks good at roughly 390px mobile width.
-
-### 4. Optional: Update Social Preview URL
-
-For the best social preview, update these two tags in `index.html` after you know the final production URL:
-
-```html
-<meta property="og:image" content="https://your-project-name.vercel.app/assets/coastal-hero.png">
-<meta name="twitter:image" content="https://your-project-name.vercel.app/assets/coastal-hero.png">
-```
-
-Then commit and redeploy.
-
-### 5. Generate the QR Code
-
-Use the final Vercel production URL, not a localhost URL.
-
-Example QR code target:
-
-```text
-https://your-project-name.vercel.app
-```
-
-Recommended QR code tools:
-
-- `https://www.qr-code-generator.com/`
-- `https://www.canva.com/qr-code-generator/`
-- `https://www.adobe.com/express/feature/image/qr-code-generator`
-
-After creating the QR code, scan it from a phone that is not connected to your computer. The page should open publicly from the Vercel URL.
-
-## Netlify Alternative
-
-You can also deploy this static site to Netlify.
-
-### Drag-and-Drop
-
-1. Go to `https://app.netlify.com/drop`.
-2. Drag this entire folder into the upload area.
-3. Netlify will create a public HTTPS URL.
-4. Use that HTTPS URL for the QR code.
-
-### GitHub Deploy
-
-1. Push this folder to GitHub.
-2. In Netlify, click `Add new site`.
-3. Choose `Import an existing project`.
-4. Select the GitHub repository.
-5. Use these settings:
-   - Build command: leave empty
-   - Publish directory: `.`
-6. Deploy.
-
-## QR Code Checklist
-
-- Do not use `localhost`.
-- Do not use `127.0.0.1`.
-- Do not use a Windows file path.
-- Use the final public HTTPS URL from Vercel or Netlify.
-- Test the QR code from a mobile phone before printing.
+  <script src="script.js"></script>
+</body>
+</html>

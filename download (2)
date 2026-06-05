@@ -1,5 +1,3 @@
-docs.json
-ASSISTANT.md
-.mintignore
 elizabeth-smith-*.zip
 elizabeth-smith-*/
+package.json
