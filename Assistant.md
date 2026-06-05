@@ -26,7 +26,7 @@ Proven success backed by strong sales and satisfied clients.
 - 539 Closed Units, 2014-2026
 - 1,022 Estimated Unique Transactions
 - 104% Average List-to-Sale Ratio
-- +$262K Average Price Advantage vs. MLS
+- +$476K Average Price Advantage vs. MLS
 - 300+ Client Reviews
 - 20+ Years of Experience
 
@@ -35,7 +35,7 @@ Proven success backed by strong sales and satisfied clients.
 - List/Sale Avg. Ratio: 104% vs. 98%
 - Avg. List Price: $825K
 - MLS Average: $349,000
-- Advantage: +$262,000
+- Advantage: +$476K
 
 ## Contact
 
