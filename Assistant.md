@@ -30,9 +30,9 @@ Proven success backed by strong sales and satisfied clients.
 ## Outperforms the Market
 
 - List/Sale Avg. Ratio: 104% vs. 98%
-- Avg. List Price: $825K
+- Avg. List Price: $827K
 - MLS Average: $349,000
-- Advantage: +$476K
+- Advantage: +$478,000
 
 ## Contact
 
