@@ -22,13 +22,10 @@ Proven success backed by strong sales and satisfied clients.
 
 ## Proven Stats
 
-- $440M Closed Volume, 2014-2026
-- 539 Closed Units, 2014-2026
-- 1,022 Estimated Unique Transactions
-- 104% Average List-to-Sale Ratio
-- +$476K Average Price Advantage vs. MLS
-- 300+ Client Reviews
-- 20+ Years of Experience
+- $535M+ Career Sales Volume
+- 1,022 Homes Sold
+- $827K Average Sale Price
+- 103.5% Average Sale-to-List Ratio
 
 ## Outperforms the Market
 
