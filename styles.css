@@ -413,6 +413,90 @@ h3 {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.awards-section {
+  width: min(100% - 24px, 960px);
+}
+
+.awards-board {
+  display: grid;
+  gap: 14px;
+}
+
+.award-column {
+  overflow: hidden;
+  border: 1px solid rgba(146, 18, 37, 0.12);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.award-column__header {
+  padding: 20px 18px 18px;
+  background:
+    linear-gradient(135deg, rgba(197, 22, 46, 0.96), rgba(146, 18, 37, 0.92)),
+    var(--red);
+  color: white;
+}
+
+.award-column--group .award-column__header {
+  background:
+    linear-gradient(135deg, rgba(48, 43, 39, 0.96), rgba(146, 18, 37, 0.88)),
+    var(--ink);
+}
+
+.award-column__header span,
+.award-column__header strong {
+  display: block;
+}
+
+.award-column__header span {
+  font-family: "Parisienne", cursive;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.award-column__header strong {
+  margin-top: 6px;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.award-list {
+  display: grid;
+  padding: 6px 16px 18px;
+}
+
+.award-year {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(216, 200, 178, 0.68);
+}
+
+.award-year:last-child {
+  border-bottom: 0;
+}
+
+.award-year span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 999px;
+  background: #f3e3d6;
+  color: var(--red);
+  font-weight: 900;
+  font-size: 0.82rem;
+}
+
+.award-year p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 .deal-total {
   margin: 0 auto 14px;
   max-width: 270px;
@@ -590,7 +674,8 @@ address a {
   }
 
   .feature-list,
-  .deal-bars {
+  .deal-bars,
+  .awards-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
