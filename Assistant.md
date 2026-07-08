@@ -52,18 +52,18 @@ Proven success backed by strong sales and satisfied clients.
 
 ### Elizabeth Smith
 
-- 2021-2025: Top Agent Individual, recognized year after year
-- 2021-2025: Top KW Luxury Member, five consecutive years
+- 2021-2025: Top Agent Individual, Recognized Year After Year
+- 2021-2025: Top KW Luxury Member, Five Consecutive Years
 - 2021-2022: Double Platinum Production
-- 2023-2025: Platinum Production, three consecutive years
+- 2023-2025: Platinum Production, Three Consecutive Years
 - 2014: Rookie of the Year; Triple Gold Production
 
 ### Willis & Smith Group
 
-- 2021-2025: Top Agent Group, recognized year after year
+- 2021-2025: Top Agent Group, Recognized Year After Year
 - 2022-2025: Millionaire Agent Production / Millionaire Agent Group
 - 2021 and 2023: Group Quadruple Platinum Production
-- 2015-2019: Group Double Platinum Production, five-year run
+- 2015-2019: Group Double Platinum Production, Five-Year Run
 - 2014: Group Triple Gold Production
 
 ## Trusted Network
