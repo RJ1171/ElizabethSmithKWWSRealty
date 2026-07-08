@@ -500,7 +500,7 @@ h3 {
 
 .award-year {
   display: grid;
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: 96px 1fr;
   gap: 12px;
   align-items: start;
   padding: 13px 0;
@@ -515,12 +515,17 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 96px;
   min-height: 34px;
+  padding: 0 10px;
   border-radius: 999px;
   background: #f3e3d6;
   color: var(--red);
   font-weight: 900;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .award-year p {
