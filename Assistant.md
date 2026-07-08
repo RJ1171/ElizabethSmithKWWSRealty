@@ -20,34 +20,6 @@ Responsive, transparent, and supportive every step of the way.
 ### Results
 Proven success backed by strong sales and satisfied clients.
 
-## Proven Stats
-
-- $535M+ Career Sales Volume
-- 1,022 Homes Sold
-- $827K Average Sale Price
-- 103.5% Average Sale-to-List Ratio
-
-## Review Highlights
-
-> Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.
->
-> Zillow.com
-
-> We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.
->
-> Zillow.com
-
-> Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.
->
-> realtor.com
-
-## Outperforms the Market
-
-- List/Sale Avg. Ratio: 104% vs. 98%
-- Avg. List Price: $827K
-- MLS Average: $349,000
-- Advantage: +$478,000
-
 ## Awards & Recognition
 
 ### Elizabeth Smith
@@ -75,6 +47,34 @@ Keller Williams is one of the world's largest real estate brokerages, known for 
 ### Willis & Smith Group
 
 The Willis & Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.
+
+## Proven Stats
+
+- $535M+ Career Sales Volume
+- 1,022 Homes Sold
+- $827K Average Sale Price
+- 103.5% Average Sale-to-List Ratio
+
+## Review Highlights
+
+> Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.
+>
+> Zillow.com
+
+> We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.
+>
+> Zillow.com
+
+> Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.
+>
+> realtor.com
+
+## Outperforms the Market
+
+- List/Sale Avg. Ratio: 104% vs. 98%
+- Avg. List Price: $827K
+- MLS Average: $349,000
+- Advantage: +$478,000
 
 ## Contact
 
