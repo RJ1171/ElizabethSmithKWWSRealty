@@ -624,15 +624,10 @@ h3 {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: rgba(197, 22, 46, 0.08);
-  color: var(--red-dark);
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.closing-contact a:first-child {
   background: var(--red);
   color: white;
+  text-decoration: none;
+  font-weight: 800;
 }
 
 .contact {
