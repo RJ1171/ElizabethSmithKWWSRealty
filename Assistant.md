@@ -27,6 +27,20 @@ Proven success backed by strong sales and satisfied clients.
 - $827K Average Sale Price
 - 103.5% Average Sale-to-List Ratio
 
+## Review Highlights
+
+> Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.
+>
+> Zillow.com
+
+> We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.
+>
+> Zillow.com
+
+> Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.
+>
+> realtor.com
+
 ## Outperforms the Market
 
 - List/Sale Avg. Ratio: 104% vs. 98%

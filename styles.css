@@ -297,6 +297,38 @@ h3 {
   color: var(--muted);
 }
 
+.review-quotes {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.review-quotes blockquote {
+  margin: 0;
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 10px 26px rgba(72, 42, 30, 0.08);
+  text-align: left;
+}
+
+.review-quotes p {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.review-quotes cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--red);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.82rem;
+}
+
 .stats-section {
   width: min(100% - 24px, 860px);
 }
