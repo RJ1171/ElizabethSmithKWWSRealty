@@ -1,30 +1,95 @@
-{
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
+const stickyCta = document.querySelector(".sticky-cta");
+const closing = document.querySelector(".closing");
+
+if (stickyCta && closing && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      stickyCta.style.opacity = entry.isIntersecting ? "0" : "1";
+      stickyCta.style.pointerEvents = entry.isIntersecting ? "none" : "auto";
     },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
+    { threshold: 0.25 }
+  );
+
+  observer.observe(closing);
+}
+
+const featuredListingsSection = document.querySelector("#featured-listings-section");
+const featuredListingsGrid = document.querySelector("#featured-listings-grid");
+
+const currencyFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+});
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function normalizeDate(value) {
+  const date = new Date(value || 0).getTime();
+  return Number.isNaN(date) ? 0 : date;
+}
+
+function getFeaturedListings(listings) {
+  return listings
+    .filter((listing) => listing.status === "Active")
+    .filter((listing) => Number(listing.price) >= 750000)
+    .sort((a, b) => {
+      const priceDifference = Number(b.price) - Number(a.price);
+      if (priceDifference !== 0) return priceDifference;
+      return normalizeDate(b.listingDate) - normalizeDate(a.listingDate);
+    })
+    .slice(0, 6);
+}
+
+function renderListingCard(listing) {
+  const image = listing.imageUrl
+    ? `<img src="${escapeHtml(listing.imageUrl)}" alt="${escapeHtml(listing.address)} listing">`
+    : `<div class="listing-card__placeholder">Willis &amp; Smith</div>`;
+  const listingLink = listing.listingUrl
+    ? `<a class="listing-card__button" href="${escapeHtml(listing.listingUrl)}" target="_blank" rel="noopener">View Listing</a>`
+    : "";
+
+  return `
+    <article class="listing-card">
+      <div class="listing-card__media">${image}</div>
+      <div class="listing-card__body">
+        <p class="listing-card__price">${currencyFormatter.format(Number(listing.price))}</p>
+        <h3>${escapeHtml(listing.address)}</h3>
+        <p class="listing-card__location">${escapeHtml(listing.city)}, ${escapeHtml(listing.state)}</p>
+        <div class="listing-card__facts">
+          <span>${escapeHtml(listing.beds)} Beds</span>
+          <span>${escapeHtml(listing.baths)} Baths</span>
+          <span>${escapeHtml(listing.sqft)} Sq Ft</span>
+        </div>
+        <p>${escapeHtml(listing.description)}</p>
+        ${listingLink}
+      </div>
+    </article>
+  `;
+}
+
+// Only use listing data that Elizabeth Smith, Willis & Smith Group, Keller Williams, or the approved IDX/MLS provider has permission to display.
+// Currently this section uses manually entered listing data from /data/featured-listings.json.
+// When IDX/API access is approved, replace the manual JSON import in /lib/listings.ts with a server-side API call to the approved IDX provider.
+// Keep the same normalized listing object shape so the front-end component does not need to change.
+if (featuredListingsSection && featuredListingsGrid) {
+  fetch("./data/featured-listings.json")
+    .then((response) => (response.ok ? response.json() : []))
+    .then((listings) => {
+      const featuredListings = getFeaturedListings(Array.isArray(listings) ? listings : []);
+      if (featuredListings.length === 0) return;
+
+      featuredListingsGrid.innerHTML = featuredListings.map(renderListingCard).join("");
+      featuredListingsSection.hidden = false;
+    })
+    .catch(() => {
+      featuredListingsSection.hidden = true;
+    });
 }
