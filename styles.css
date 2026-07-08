@@ -1,818 +1,258 @@
-:root {
-  --red: #c5162e;
-  --red-dark: #921225;
-  --cream: #f7f3ea;
-  --cream-2: #fffaf1;
-  --tan: #eadfcf;
-  --tan-2: #d8c8b2;
-  --ink: #302b27;
-  --muted: #756b62;
-  --white: #fffdf8;
-  --shadow: 0 18px 45px rgba(70, 44, 34, 0.14);
-  --radius: 22px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--ink);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.55;
-}
-
-a {
-  color: inherit;
-}
-
-main {
-  overflow: hidden;
-  padding-bottom: 78px;
-}
-
-.hero {
-  position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: flex-end;
-  padding: 22px 18px 30px;
-  isolation: isolate;
-  color: var(--white);
-}
-
-.hero__image {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background:
-    linear-gradient(180deg, rgba(42, 30, 25, 0.22), rgba(38, 23, 19, 0.8)),
-    url("assets/coastal-hero.png") center / cover no-repeat;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 42%;
-  z-index: -1;
-  background: linear-gradient(180deg, transparent, rgba(74, 20, 25, 0.72));
-}
-
-.hero__content {
-  width: min(100%, 620px);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.brand-kicker,
-.eyebrow {
-  margin: 0 0 10px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.portrait {
-  width: 132px;
-  height: 132px;
-  margin: 0 auto 16px;
-  border: 5px solid rgba(255, 253, 248, 0.88);
-  border-radius: 999px;
-  background: var(--tan);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.26);
-  overflow: hidden;
-}
-
-.portrait img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center 34%;
-}
-
-h1,
-h2,
-h3,
-p {
-  overflow-wrap: anywhere;
-}
-
-h1 {
-  margin: 0;
-  font-family: "Parisienne", cursive;
-  font-size: clamp(4.2rem, 18vw, 7.5rem);
-  line-height: 0.88;
-  font-weight: 400;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-}
-
-.hero__subtitle {
-  margin: 12px auto 20px;
-  max-width: 350px;
-  color: #fff4ea;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 1.08rem;
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.button {
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 12px 18px;
-  border: 1px solid transparent;
-  font-weight: 800;
-  text-decoration: none;
-  box-shadow: 0 12px 26px rgba(69, 28, 24, 0.16);
-}
-
-.button--primary {
-  background: var(--red);
-  color: white;
-}
-
-.button--light {
-  background: var(--white);
-  color: var(--red-dark);
-}
-
-.button--outline {
-  border-color: rgba(255, 253, 248, 0.7);
-  color: white;
-  background: rgba(255, 253, 248, 0.12);
-  backdrop-filter: blur(8px);
-}
-
-.section,
-.panel,
-.trust,
-.closing,
-.contact {
-  width: min(100% - 32px, 760px);
-  margin: 0 auto;
-}
-
-.panel,
-.card,
-.comparison-card,
-.closing,
-.contact {
-  border: 1px solid rgba(146, 18, 37, 0.12);
-  border-radius: var(--radius);
-  background: rgba(255, 253, 248, 0.86);
-  box-shadow: var(--shadow);
-}
-
-.panel {
-  margin-top: -28px;
-  position: relative;
-  z-index: 2;
-  padding: 30px 22px;
-  text-align: center;
-}
-
-.script-label {
-  margin: 0 0 8px;
-  color: var(--red);
-  font-family: "Parisienne", cursive;
-  font-size: 2.35rem;
-  line-height: 1;
-}
-
-h2 {
-  margin: 0;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: clamp(1.45rem, 6vw, 2.45rem);
-  line-height: 1.14;
-}
-
-h3 {
-  margin: 0 0 4px;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 1.05rem;
-}
-
-.panel p:last-child,
-.card p,
-.closing p {
-  margin: 14px 0 0;
-  color: var(--muted);
-}
-
-.section {
-  padding: 42px 0 0;
-}
-
-.card {
-  padding: 24px 20px;
-}
-
-.card--center {
-  text-align: center;
-}
-
-.eyebrow {
-  color: var(--red);
-}
-
-.section-heading {
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-.feature-list {
-  display: grid;
-  gap: 12px;
-}
-
-.feature-card {
-  display: grid;
-  grid-template-columns: 46px 1fr;
-  gap: 14px;
-  align-items: start;
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--white);
-  box-shadow: 0 10px 28px rgba(72, 42, 30, 0.09);
-}
-
-.feature-card__icon {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: #f2e2d6;
-  color: var(--red);
-  font-weight: 900;
-  font-size: 0.82rem;
-}
-
-.feature-card p,
-.deal-card p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.trust {
-  margin-top: 42px;
-  padding: 26px 18px;
-  text-align: center;
-  border-top: 2px solid var(--red);
-  border-bottom: 2px solid var(--red);
-}
-
-.stars {
-  color: var(--red);
-  font-size: 1.7rem;
-  letter-spacing: 0.1em;
-}
-
-.trust__count {
-  margin: 8px 0 0;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-}
-
-.trust__source {
-  margin: 2px 0 0;
-  color: var(--muted);
-}
-
-.review-quotes {
-  display: grid;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.review-quotes blockquote {
-  margin: 0;
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--white);
-  box-shadow: 0 10px 26px rgba(72, 42, 30, 0.08);
-  text-align: left;
-}
-
-.review-quotes p {
-  margin: 0;
-  color: var(--ink);
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 0.95rem;
-  line-height: 1.55;
-}
-
-.review-quotes cite {
-  display: block;
-  margin-top: 10px;
-  color: var(--red);
-  font-style: normal;
-  font-weight: 900;
-  font-size: 0.82rem;
-}
-
-.stats-section {
-  width: min(100% - 24px, 860px);
-}
-
-.stat-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.stat-card {
-  flex: 1 1 calc(50% - 10px);
-  max-width: calc(50% - 5px);
-  min-height: 144px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 16px 12px;
-  border-radius: 18px;
-  text-align: center;
-  background: var(--white);
-  box-shadow: 0 12px 30px rgba(72, 42, 30, 0.1);
-}
-
-.stat-card strong {
-  color: var(--red);
-  font-size: clamp(2rem, 11vw, 3rem);
-  line-height: 1;
-}
-
-.stat-card span {
-  margin-top: 8px;
-  font-weight: 800;
-}
-
-.stat-card small {
-  color: var(--muted);
-  font-size: 0.76rem;
-}
-
-.comparison-card {
-  padding: 24px 18px;
-}
-
-.comparison-card .script-label {
-  text-align: center;
-}
-
-.comparison-card h2 {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.ratio-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.ratio-row > div {
-  padding: 16px 10px;
-  border-radius: 16px;
-  background: var(--cream-2);
-  text-align: center;
-}
-
-.ratio-row span,
-.ratio-row small {
-  display: block;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.ratio-row strong {
-  display: block;
-  color: var(--red);
-  font-size: 2.7rem;
-  line-height: 1;
-}
-
-.market-list {
-  margin: 16px 0 0;
-  display: grid;
-  gap: 8px;
-}
-
-.market-list div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 13px 14px;
-  border-radius: 14px;
-  background: #f4eadf;
-}
-
-.market-list dt {
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.market-list dd {
-  margin: 0;
-  font-weight: 900;
-}
-
-.market-list .advantage {
-  background: var(--red);
-  color: white;
-}
-
-.market-list .advantage dt {
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.awards-section {
-  width: min(100% - 24px, 960px);
-}
-
-.awards-board {
-  display: grid;
-  gap: 14px;
-}
-
-.award-column {
-  overflow: hidden;
-  border: 1px solid rgba(146, 18, 37, 0.12);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
-
-.award-column__header {
-  padding: 20px 18px 18px;
-  background:
-    linear-gradient(135deg, rgba(197, 22, 46, 0.96), rgba(146, 18, 37, 0.92)),
-    var(--red);
-  color: white;
-}
-
-.award-column--group .award-column__header {
-  background:
-    linear-gradient(135deg, rgba(48, 43, 39, 0.96), rgba(146, 18, 37, 0.88)),
-    var(--ink);
-}
-
-.award-column__header span,
-.award-column__header strong {
-  display: block;
-}
-
-.award-column__header span {
-  font-family: "Parisienne", cursive;
-  font-size: 2.2rem;
-  line-height: 1;
-}
-
-.award-column__header strong {
-  margin-top: 6px;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 1.05rem;
-}
-
-.award-list {
-  display: grid;
-  padding: 6px 16px 18px;
-}
-
-.award-year {
-  display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 12px;
-  align-items: start;
-  padding: 13px 0;
-  border-bottom: 1px solid rgba(216, 200, 178, 0.68);
-}
-
-.award-year:last-child {
-  border-bottom: 0;
-}
-
-.award-year span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 96px;
-  min-height: 34px;
-  padding: 0 10px;
-  border-radius: 999px;
-  background: #f3e3d6;
-  color: var(--red);
-  font-weight: 900;
-  font-size: 0.78rem;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.award-year p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
-.partner-section {
-  width: min(100% - 32px, 860px);
-}
-
-.partner-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.partner-card {
-  position: relative;
-  overflow: hidden;
-  padding: 22px 20px;
-  border: 1px solid rgba(146, 18, 37, 0.12);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
-
-.partner-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: var(--red);
-}
-
-.partner-card--accent {
-  background: linear-gradient(180deg, #fffdf8, #f3e3d6);
-}
-
-.partner-card .eyebrow {
-  margin-bottom: 10px;
-  color: var(--red);
-}
-
-.partner-card p:last-child {
-  margin: 0;
-  color: var(--muted);
-}
-
-.deal-total {
-  margin: 0 auto 14px;
-  max-width: 270px;
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--red);
-  color: white;
-  text-align: center;
-}
-
-.deal-total strong {
-  display: block;
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.deal-total span {
-  font-weight: 800;
-}
-
-.deal-bars {
-  display: grid;
-  gap: 12px;
-}
-
-.deal-card {
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--white);
-  box-shadow: 0 10px 28px rgba(72, 42, 30, 0.09);
-}
-
-.deal-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.deal-card__top span {
-  color: var(--red);
-  font-weight: 900;
-  font-size: 1.45rem;
-}
-
-.bar {
-  height: 12px;
-  margin: 12px 0 8px;
-  border-radius: 999px;
-  background: #efe1d2;
-  overflow: hidden;
-}
-
-.bar::before {
-  content: "";
-  display: block;
-  width: var(--bar);
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--red), #d96d79);
-}
-
-.closing {
-  position: relative;
-  margin-top: 44px;
-  padding: 30px 20px;
-  text-align: center;
-  background: linear-gradient(180deg, #fffdf8, #f3e3d6);
-}
-
-.closing .button-row {
-  margin-top: 20px;
-}
-
-.closing .button--outline {
-  border-color: rgba(197, 22, 46, 0.35);
-  background: transparent;
-  color: var(--red-dark);
-}
-
-.closing-contact {
-  display: grid;
-  gap: 9px;
-  margin-top: 20px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(197, 22, 46, 0.16);
-  font-style: normal;
-}
-
-.closing-contact a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: var(--red);
-  color: white;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.contact {
-  margin-top: 22px;
-  padding: 28px 20px;
-  text-align: center;
-  background: var(--red);
-  color: white;
-}
-
-.contact h2 {
-  font-family: "Parisienne", cursive;
-  font-size: 3.1rem;
-  font-weight: 400;
-}
-
-.contact p {
-  margin: 0 0 12px;
-  font-weight: 800;
-}
-
-address {
-  display: grid;
-  gap: 9px;
-  font-style: normal;
-}
-
-address a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.section-red-dots::before,
-.section-red-dots::after {
-  content: "";
-  position: absolute;
-  width: 94px;
-  height: 94px;
-  border-radius: 999px;
-  border: 18px solid rgba(197, 22, 46, 0.22);
-  pointer-events: none;
-}
-
-.section-red-dots::before {
-  top: 18px;
-  right: -40px;
-}
-
-.section-red-dots::after {
-  left: -48px;
-  bottom: 34px;
-}
-
-.sticky-cta {
-  position: fixed;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  z-index: 20;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 8px;
-  border: 1px solid rgba(146, 18, 37, 0.12);
-  border-radius: 999px;
-  background: rgba(255, 253, 248, 0.94);
-  box-shadow: 0 18px 42px rgba(57, 33, 26, 0.2);
-  backdrop-filter: blur(12px);
-}
-
-.sticky-cta a {
-  min-height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: var(--red);
-  color: white;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.sticky-cta a:last-child {
-  background: var(--ink);
-}
-
-@media (min-width: 700px) {
-  .hero {
-    min-height: 780px;
-    padding-bottom: 54px;
-  }
-
-  .button {
-    min-width: 158px;
-  }
-
-  .feature-list,
-  .deal-bars,
-  .awards-board,
-  .partner-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .stat-grid {
-    justify-content: center;
-  }
-
-  .stat-card {
-    flex-basis: calc(25% - 10px);
-    max-width: calc(25% - 8px);
-    min-height: 170px;
-  }
-
-  .panel,
-  .card,
-  .comparison-card,
-  .closing,
-  .contact {
-    padding: 34px;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    background:
-      linear-gradient(90deg, rgba(197, 22, 46, 0.06), transparent 18%, transparent 82%, rgba(197, 22, 46, 0.06)),
-      var(--cream);
-  }
-
-  .sticky-cta {
-    width: 420px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis & Smith Group.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elizabeth Smith | Willis &amp; Smith Group">
+  <meta property="og:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
+  <meta property="og:image" content="/assets/coastal-hero.png">
+  <meta property="og:site_name" content="Elizabeth Smith | Willis &amp; Smith Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elizabeth Smith | Willis &amp; Smith Group">
+  <meta name="twitter:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
+  <meta name="twitter:image" content="/assets/coastal-hero.png">
+  <title>Elizabeth Smith | Willis &amp; Smith Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero section-red-dots" aria-labelledby="hero-title">
+      <!-- Replace assets/coastal-hero.png with the final coastal/background image from the printed brochure if available. -->
+      <div class="hero__image" role="img" aria-label="Coastal luxury real estate scene"></div>
+      <div class="hero__content">
+        <p class="brand-kicker">Willis &amp; Smith</p>
+        <div class="portrait">
+          <img src="assets/elizabeth-smith-portrait.jpg" alt="Portrait of Elizabeth Smith">
+        </div>
+        <h1 id="hero-title">Elizabeth Smith</h1>
+        <p class="hero__subtitle">Trusted for Results. Known for Relationships.</p>
+        <div class="button-row" aria-label="Primary contact links">
+          <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
+          <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
+          <a class="button button--outline" href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" aria-label="Follow Elizabeth Smith on Instagram">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel intro" aria-labelledby="why-list">
+      <p class="script-label">Why List With Elizabeth</p>
+      <h2 id="why-list">Trusted Guidance With a Personal Touch.</h2>
+      <p>Elizabeth Smith is committed to making every client feel heard, supported, and cared for throughout one of life's biggest decisions by combining trusted guidance, strong market expertise, and a personal approach that builds lasting relationships long after the transaction is complete.</p>
+    </section>
+
+    <section class="section" aria-labelledby="about">
+      <div class="card card--center">
+        <p class="eyebrow">About Elizabeth</p>
+        <h2 id="about">Local Expertise. Proven Care.</h2>
+        <p>Elizabeth Smith is a top-producing Realtor and partner of the Willis &amp; Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the North Shore area.</p>
+      </div>
+    </section>
+
+    <section class="section featured-listings-section" id="featured-listings-section" aria-labelledby="featured-listings" hidden>
+      <div class="section-heading">
+        <p class="script-label">Current Featured Listings</p>
+        <h2 id="featured-listings">Explore Elizabeth Smith's Most Prominent Active Listings.</h2>
+      </div>
+      <div class="featured-listings-grid" id="featured-listings-grid"></div>
+    </section>
+
+    <section class="section partner-section" aria-labelledby="partners">
+      <div class="section-heading">
+        <p class="script-label">Trusted Network</p>
+        <h2 id="partners">Local Care Backed by a Powerful Real Estate Platform.</h2>
+      </div>
+      <div class="partner-grid">
+        <article class="partner-card">
+          <p class="eyebrow">Keller Williams</p>
+          <p>Keller Williams is one of the world's largest real estate brokerages, known for its agent-first culture, industry-leading training, innovative technology, and commitment to delivering exceptional service. With a global network of experienced professionals, Keller Williams helps clients confidently navigate every step of the buying and selling process.</p>
+        </article>
+        <article class="partner-card partner-card--accent">
+          <p class="eyebrow">Willis &amp; Smith Group</p>
+          <p>The Willis &amp; Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="clients-choose">
+      <div class="section-heading">
+        <p class="script-label">Why Clients Choose Elizabeth</p>
+        <h2 id="clients-choose">A Polished Process From First Conversation to Closing.</h2>
+      </div>
+      <div class="feature-list">
+        <article class="feature-card">
+          <span class="feature-card__icon">01</span>
+          <div>
+            <h3>Negotiation</h3>
+            <p>Strategic, confident, and focused on protecting your best interests.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">02</span>
+          <div>
+            <h3>Marketing</h3>
+            <p>Elevated marketing designed to make every listing stand out.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">03</span>
+          <div>
+            <h3>Communication</h3>
+            <p>Responsive, transparent, and supportive every step of the way.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">04</span>
+          <div>
+            <h3>Results</h3>
+            <p>Proven success backed by strong sales and satisfied clients.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Review summary">
+      <div class="stars" aria-label="Five star rating">&starf;&starf;&starf;&starf;&starf;</div>
+      <p class="trust__count">Over 300 reviews</p>
+      <p class="trust__source">Via Zillow and Realtor.com</p>
+      <div class="review-quotes" aria-label="Client review highlights">
+        <blockquote>
+          <p>Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.</p>
+          <cite>Zillow.com</cite>
+        </blockquote>
+        <blockquote>
+          <p>We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.</p>
+          <cite>Zillow.com</cite>
+        </blockquote>
+        <blockquote>
+          <p>Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.</p>
+          <cite>realtor.com</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section awards-section" aria-labelledby="awards">
+      <div class="section-heading">
+        <p class="script-label">Awards &amp; Recognition</p>
+        <h2 id="awards">A History of Standout Performance.</h2>
+      </div>
+      <div class="awards-board">
+        <article class="award-column">
+          <div class="award-column__header">
+            <span>Elizabeth Smith</span>
+            <strong>Individual Honors</strong>
+          </div>
+          <div class="award-list">
+            <div class="award-year"><span>2021-2025</span><p>Top Agent Individual, Recognized Year After Year</p></div>
+            <div class="award-year"><span>2021-2025</span><p>Top KW Luxury Member, Five Consecutive Years</p></div>
+            <div class="award-year"><span>2021-2022</span><p>Double Platinum Production</p></div>
+            <div class="award-year"><span>2023-2025</span><p>Platinum Production, Three Consecutive Years</p></div>
+            <div class="award-year"><span>2014</span><p>Rookie of the Year; Triple Gold Production</p></div>
+          </div>
+        </article>
+        <article class="award-column award-column--group">
+          <div class="award-column__header">
+            <span>Willis &amp; Smith Group</span>
+            <strong>Team Honors</strong>
+          </div>
+          <div class="award-list">
+            <div class="award-year"><span>2021-2025</span><p>Top Agent Group, Recognized Year After Year</p></div>
+            <div class="award-year"><span>2022-2025</span><p>Millionaire Agent Production / Millionaire Agent Group</p></div>
+            <div class="award-year"><span>2021 &amp; 2023</span><p>Group Quadruple Platinum Production</p></div>
+            <div class="award-year"><span>2015-2019</span><p>Group Double Platinum Production, Five-Year Run</p></div>
+            <div class="award-year"><span>2014</span><p>Group Triple Gold Production</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section stats-section" aria-labelledby="stats">
+      <div class="section-heading">
+        <p class="script-label">Proven Stats</p>
+        <h2 id="stats">Results That Stand Out.</h2>
+      </div>
+      <div class="stat-grid">
+        <article class="stat-card">
+          <strong>$535M+</strong>
+          <span>Career Sales Volume</span>
+          <small>Proven production</small>
+        </article>
+        <article class="stat-card">
+          <strong>1,022</strong>
+          <span>Homes Sold</span>
+          <small>Career total</small>
+        </article>
+        <article class="stat-card">
+          <strong>$827K</strong>
+          <span>Average Sale Price</span>
+          <small>Strong market positioning</small>
+        </article>
+        <article class="stat-card">
+          <strong>103.5%</strong>
+          <span>Average Sale-to-List Ratio</span>
+          <small>Consistently above list</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="market">
+      <div class="comparison-card">
+        <p class="script-label">Outperforms the Market</p>
+        <h2 id="market">A Measurable Advantage.</h2>
+        <div class="ratio-row">
+          <div>
+            <span>List/Sale Avg. Ratio</span>
+            <strong>104%</strong>
+            <small>Elizabeth</small>
+          </div>
+          <div>
+            <span>Market Avg.</span>
+            <strong>98%</strong>
+            <small>MLS</small>
+          </div>
+        </div>
+        <dl class="market-list">
+          <div>
+            <dt>Avg. List Price</dt>
+            <dd>$827K</dd>
+          </div>
+          <div>
+            <dt>MLS Average</dt>
+            <dd>$349,000</dd>
+          </div>
+          <div class="advantage">
+            <dt>Advantage</dt>
+            <dd>+$478,000</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="closing section-red-dots" aria-labelledby="closing">
+      <p class="script-label">Ready to Make Your Next Move?</p>
+      <h2 id="closing">Work With a Trusted Local Expert.</h2>
+<div class="button-row">
+        <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
+        <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
+        <a class="button button--outline" href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <address class="closing-contact">
+        <a href="tel:+19783020824">(978) 302-0824</a>
+        <a href="mailto:elizabethsmith@kw.com">elizabethsmith@kw.com</a>
+        <a href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">@ElizabethSmithWS</a>
+      </address>
+    </section>
+  </main>
+
+  <nav class="sticky-cta" aria-label="Sticky contact actions">
+    <a href="tel:+19783020824">Call</a>
+    <a href="mailto:elizabethsmith@kw.com">Email</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
