@@ -1,258 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis & Smith Group.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Elizabeth Smith | Willis &amp; Smith Group">
-  <meta property="og:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
-  <meta property="og:image" content="/assets/coastal-hero.png">
-  <meta property="og:site_name" content="Elizabeth Smith | Willis &amp; Smith Group">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Elizabeth Smith | Willis &amp; Smith Group">
-  <meta name="twitter:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
-  <meta name="twitter:image" content="/assets/coastal-hero.png">
-  <title>Elizabeth Smith | Willis &amp; Smith Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main>
-    <section class="hero section-red-dots" aria-labelledby="hero-title">
-      <!-- Replace assets/coastal-hero.png with the final coastal/background image from the printed brochure if available. -->
-      <div class="hero__image" role="img" aria-label="Coastal luxury real estate scene"></div>
-      <div class="hero__content">
-        <p class="brand-kicker">Willis &amp; Smith</p>
-        <div class="portrait">
-          <img src="assets/elizabeth-smith-portrait.jpg" alt="Portrait of Elizabeth Smith">
-        </div>
-        <h1 id="hero-title">Elizabeth Smith</h1>
-        <p class="hero__subtitle">Trusted for Results. Known for Relationships.</p>
-        <div class="button-row" aria-label="Primary contact links">
-          <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
-          <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
-          <a class="button button--outline" href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" aria-label="Follow Elizabeth Smith on Instagram">Instagram</a>
-        </div>
-      </div>
-    </section>
+# Elizabeth Smith
 
-    <section class="panel intro" aria-labelledby="why-list">
-      <p class="script-label">Why List With Elizabeth</p>
-      <h2 id="why-list">Trusted Guidance With a Personal Touch.</h2>
-      <p>Elizabeth Smith is committed to making every client feel heard, supported, and cared for throughout one of life's biggest decisions by combining trusted guidance, strong market expertise, and a personal approach that builds lasting relationships long after the transaction is complete.</p>
-    </section>
+Trusted for Results. Known for Relationships.
 
-    <section class="section" aria-labelledby="about">
-      <div class="card card--center">
-        <p class="eyebrow">About Elizabeth</p>
-        <h2 id="about">Local Expertise. Proven Care.</h2>
-        <p>Elizabeth Smith is a top-producing Realtor and partner of the Willis &amp; Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the North Shore area.</p>
-      </div>
-    </section>
+This repository's public QR landing page is the custom static site at `index.html`. If a docs platform displays this page, use the deployed site root URL to open the full red/cream mobile landing page design.
 
-    <section class="section featured-listings-section" id="featured-listings-section" aria-labelledby="featured-listings" hidden>
-      <div class="section-heading">
-        <p class="script-label">Current Featured Listings</p>
-        <h2 id="featured-listings">Explore Elizabeth Smith's Most Prominent Active Listings.</h2>
-      </div>
-      <div class="featured-listings-grid" id="featured-listings-grid"></div>
-    </section>
+Elizabeth Smith is a top-producing Realtor and partner of the Willis & Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the Merrimack Valley.
 
-    <section class="section partner-section" aria-labelledby="partners">
-      <div class="section-heading">
-        <p class="script-label">Trusted Network</p>
-        <h2 id="partners">Local Care Backed by a Powerful Real Estate Platform.</h2>
-      </div>
-      <div class="partner-grid">
-        <article class="partner-card">
-          <p class="eyebrow">Keller Williams</p>
-          <p>Keller Williams is one of the world's largest real estate brokerages, known for its agent-first culture, industry-leading training, innovative technology, and commitment to delivering exceptional service. With a global network of experienced professionals, Keller Williams helps clients confidently navigate every step of the buying and selling process.</p>
-        </article>
-        <article class="partner-card partner-card--accent">
-          <p class="eyebrow">Willis &amp; Smith Group</p>
-          <p>The Willis &amp; Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.</p>
-        </article>
-      </div>
-    </section>
+## Why Clients Choose Elizabeth
 
-    <section class="section" aria-labelledby="clients-choose">
-      <div class="section-heading">
-        <p class="script-label">Why Clients Choose Elizabeth</p>
-        <h2 id="clients-choose">A Polished Process From First Conversation to Closing.</h2>
-      </div>
-      <div class="feature-list">
-        <article class="feature-card">
-          <span class="feature-card__icon">01</span>
-          <div>
-            <h3>Negotiation</h3>
-            <p>Strategic, confident, and focused on protecting your best interests.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-card__icon">02</span>
-          <div>
-            <h3>Marketing</h3>
-            <p>Elevated marketing designed to make every listing stand out.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-card__icon">03</span>
-          <div>
-            <h3>Communication</h3>
-            <p>Responsive, transparent, and supportive every step of the way.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-card__icon">04</span>
-          <div>
-            <h3>Results</h3>
-            <p>Proven success backed by strong sales and satisfied clients.</p>
-          </div>
-        </article>
-      </div>
-    </section>
+### Negotiation
+Strategic, confident, and focused on protecting your best interests.
 
-    <section class="trust" aria-label="Review summary">
-      <div class="stars" aria-label="Five star rating">&starf;&starf;&starf;&starf;&starf;</div>
-      <p class="trust__count">Over 300 reviews</p>
-      <p class="trust__source">Via Zillow and Realtor.com</p>
-      <div class="review-quotes" aria-label="Client review highlights">
-        <blockquote>
-          <p>Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.</p>
-          <cite>Zillow.com</cite>
-        </blockquote>
-        <blockquote>
-          <p>We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.</p>
-          <cite>Zillow.com</cite>
-        </blockquote>
-        <blockquote>
-          <p>Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.</p>
-          <cite>realtor.com</cite>
-        </blockquote>
-      </div>
-    </section>
+### Marketing
+Elevated marketing designed to make every listing stand out.
 
-    <section class="section awards-section" aria-labelledby="awards">
-      <div class="section-heading">
-        <p class="script-label">Awards &amp; Recognition</p>
-        <h2 id="awards">A History of Standout Performance.</h2>
-      </div>
-      <div class="awards-board">
-        <article class="award-column">
-          <div class="award-column__header">
-            <span>Elizabeth Smith</span>
-            <strong>Individual Honors</strong>
-          </div>
-          <div class="award-list">
-            <div class="award-year"><span>2021-2025</span><p>Top Agent Individual, Recognized Year After Year</p></div>
-            <div class="award-year"><span>2021-2025</span><p>Top KW Luxury Member, Five Consecutive Years</p></div>
-            <div class="award-year"><span>2021-2022</span><p>Double Platinum Production</p></div>
-            <div class="award-year"><span>2023-2025</span><p>Platinum Production, Three Consecutive Years</p></div>
-            <div class="award-year"><span>2014</span><p>Rookie of the Year; Triple Gold Production</p></div>
-          </div>
-        </article>
-        <article class="award-column award-column--group">
-          <div class="award-column__header">
-            <span>Willis &amp; Smith Group</span>
-            <strong>Team Honors</strong>
-          </div>
-          <div class="award-list">
-            <div class="award-year"><span>2021-2025</span><p>Top Agent Group, Recognized Year After Year</p></div>
-            <div class="award-year"><span>2022-2025</span><p>Millionaire Agent Production / Millionaire Agent Group</p></div>
-            <div class="award-year"><span>2021 &amp; 2023</span><p>Group Quadruple Platinum Production</p></div>
-            <div class="award-year"><span>2015-2019</span><p>Group Double Platinum Production, Five-Year Run</p></div>
-            <div class="award-year"><span>2014</span><p>Group Triple Gold Production</p></div>
-          </div>
-        </article>
-      </div>
-    </section>
+### Communication
+Responsive, transparent, and supportive every step of the way.
 
-    <section class="section stats-section" aria-labelledby="stats">
-      <div class="section-heading">
-        <p class="script-label">Proven Stats</p>
-        <h2 id="stats">Results That Stand Out.</h2>
-      </div>
-      <div class="stat-grid">
-        <article class="stat-card">
-          <strong>$535M+</strong>
-          <span>Career Sales Volume</span>
-          <small>Proven production</small>
-        </article>
-        <article class="stat-card">
-          <strong>1,022</strong>
-          <span>Homes Sold</span>
-          <small>Career total</small>
-        </article>
-        <article class="stat-card">
-          <strong>$827K</strong>
-          <span>Average Sale Price</span>
-          <small>Strong market positioning</small>
-        </article>
-        <article class="stat-card">
-          <strong>103.5%</strong>
-          <span>Average Sale-to-List Ratio</span>
-          <small>Consistently above list</small>
-        </article>
-      </div>
-    </section>
+### Results
+Proven success backed by strong sales and satisfied clients.
 
-    <section class="section" aria-labelledby="market">
-      <div class="comparison-card">
-        <p class="script-label">Outperforms the Market</p>
-        <h2 id="market">A Measurable Advantage.</h2>
-        <div class="ratio-row">
-          <div>
-            <span>List/Sale Avg. Ratio</span>
-            <strong>104%</strong>
-            <small>Elizabeth</small>
-          </div>
-          <div>
-            <span>Market Avg.</span>
-            <strong>98%</strong>
-            <small>MLS</small>
-          </div>
-        </div>
-        <dl class="market-list">
-          <div>
-            <dt>Avg. List Price</dt>
-            <dd>$827K</dd>
-          </div>
-          <div>
-            <dt>MLS Average</dt>
-            <dd>$349,000</dd>
-          </div>
-          <div class="advantage">
-            <dt>Advantage</dt>
-            <dd>+$478,000</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
+## Awards & Recognition
 
-    <section class="closing section-red-dots" aria-labelledby="closing">
-      <p class="script-label">Ready to Make Your Next Move?</p>
-      <h2 id="closing">Work With a Trusted Local Expert.</h2>
-<div class="button-row">
-        <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
-        <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
-        <a class="button button--outline" href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <address class="closing-contact">
-        <a href="tel:+19783020824">(978) 302-0824</a>
-        <a href="mailto:elizabethsmith@kw.com">elizabethsmith@kw.com</a>
-        <a href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">@ElizabethSmithWS</a>
-      </address>
-    </section>
-  </main>
+### Elizabeth Smith
 
-  <nav class="sticky-cta" aria-label="Sticky contact actions">
-    <a href="tel:+19783020824">Call</a>
-    <a href="mailto:elizabethsmith@kw.com">Email</a>
-  </nav>
+- 2021-2025: Top Agent Individual, Recognized Year After Year
+- 2021-2025: Top KW Luxury Member, Five Consecutive Years
+- 2021-2022: Double Platinum Production
+- 2023-2025: Platinum Production, Three Consecutive Years
+- 2014: Rookie of the Year; Triple Gold Production
 
-  <script src="script.js"></script>
-</body>
-</html>
+### Willis & Smith Group
+
+- 2021-2025: Top Agent Group, Recognized Year After Year
+- 2022-2025: Millionaire Agent Production / Millionaire Agent Group
+- 2021 and 2023: Group Quadruple Platinum Production
+- 2015-2019: Group Double Platinum Production, Five-Year Run
+- 2014: Group Triple Gold Production
+
+## Trusted Network
+
+### Keller Williams
+
+Keller Williams is one of the world's largest real estate brokerages, known for its agent-first culture, industry-leading training, innovative technology, and commitment to delivering exceptional service. With a global network of experienced professionals, Keller Williams helps clients confidently navigate every step of the buying and selling process.
+
+### Willis & Smith Group
+
+The Willis & Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.
+
+## Current Featured Listings
+
+Current Featured Listings are powered by manually entered listing data in `/data/featured-listings.json`. The public website filters for active listings priced at $750,000 or above and hides the section when no listings match.
+
+## Proven Stats
+
+- $535M+ Career Sales Volume
+- 1,022 Homes Sold
+- $827K Average Sale Price
+- 103.5% Average Sale-to-List Ratio
+
+## Review Highlights
+
+> Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.
+>
+> Zillow.com
+
+> We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.
+>
+> Zillow.com
+
+> Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.
+>
+> realtor.com
+
+## Outperforms the Market
+
+- List/Sale Avg. Ratio: 104% vs. 98%
+- Avg. List Price: $827K
+- MLS Average: $349,000
+- Advantage: +$478,000
+
+## Contact
+
+Phone: (978) 302-0824  
+Email: elizabethsmith@kw.com  
+Instagram: @ElizabethSmithWS
