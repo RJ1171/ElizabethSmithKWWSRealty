@@ -52,31 +52,19 @@ Proven success backed by strong sales and satisfied clients.
 
 ### Elizabeth Smith
 
-- 2014: Triple Gold Production; Rookie of the Year; Top Agent Individual
-- 2015: Martha Squires Award
-- 2016: Martha Squires Award; Bronze Local KW Cares Fund
-- 2017: Martha Squires Award; Platinum Production; Top Agent Individual
-- 2018: Platinum Production; Top Agent Individual
-- 2019: Platinum Production; Top Agent Individual
-- 2021: Double Platinum Production; Top KW Luxury Member; Top Agent Individual
-- 2022: Bronze KW Cares International Fund; Double Platinum Production; KW Top Luxury Member; Top Agent Individual
-- 2023: Bronze KW Cares International Fund; Platinum Production; Top KW Luxury Member; Top Agent Individual
-- 2024: Platinum Production; Top KW Luxury Member; Top Agent Individual
-- 2025: Platinum Production; Top KW Luxury Member; Top Agent Individual
+- 2021-2025: Top Agent Individual, recognized year after year
+- 2021-2025: Top KW Luxury Member, five consecutive years
+- 2021-2022: Double Platinum Production
+- 2023-2025: Platinum Production, three consecutive years
+- 2014: Rookie of the Year; Triple Gold Production
 
 ### Willis & Smith Group
 
+- 2021-2025: Top Agent Group, recognized year after year
+- 2022-2025: Millionaire Agent Production / Millionaire Agent Group
+- 2021 and 2023: Group Quadruple Platinum Production
+- 2015-2019: Group Double Platinum Production, five-year run
 - 2014: Group Triple Gold Production
-- 2015: Group Double Platinum Production
-- 2016: Group Double Platinum Production; Top Agent Group
-- 2017: Group Double Platinum Production; Top Agent Group
-- 2018: Group Double Platinum Production; Top Agent Group
-- 2019: Group Double Platinum Production; Top Agent Group
-- 2021: Group Quadruple Platinum Production; Top Agent Group
-- 2022: Millionaire Agent Production; Top Agent Group
-- 2023: Group Quadruple Platinum Production; Top Agent Group
-- 2024: Millionaire Agent Production; Top Agent Group
-- 2025: Millionaire Agent Group; Top Agent Group
 
 ## Contact
 
