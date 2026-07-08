@@ -38,4 +38,4 @@ Proven success backed by strong sales and satisfied clients.
 
 Phone: (978) 302-0824  
 Email: elizabethsmith@kw.com  
-Instagram: @WillisAndSmithGroup
+Instagram: @ElizabethSmithWS
