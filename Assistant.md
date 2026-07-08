@@ -66,6 +66,16 @@ Proven success backed by strong sales and satisfied clients.
 - 2015-2019: Group Double Platinum Production, five-year run
 - 2014: Group Triple Gold Production
 
+## Trusted Network
+
+### Keller Williams
+
+Keller Williams is one of the world's largest real estate brokerages, known for its agent-first culture, industry-leading training, innovative technology, and commitment to delivering exceptional service. With a global network of experienced professionals, Keller Williams helps clients confidently navigate every step of the buying and selling process.
+
+### Willis & Smith Group
+
+The Willis & Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.
+
 ## Contact
 
 Phone: (978) 302-0824  
