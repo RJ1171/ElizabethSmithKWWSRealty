@@ -1,87 +1,159 @@
-# Elizabeth Smith
+# Elizabeth Smith | Willis & Smith Group QR Landing Page
 
-Trusted for Results. Known for Relationships.
+This is a static, mobile-first QR landing page for Elizabeth Smith and the Willis & Smith Group.
 
-This repository's public QR landing page is the custom static site at `index.html`. If a docs platform displays this page, use the deployed site root URL to open the full red/cream mobile landing page design.
+The site is ready for public hosting on Vercel. It does not depend on localhost, a local server, or file paths from one computer.
 
-Elizabeth Smith is a top-producing Realtor and partner of the Willis & Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the Merrimack Valley.
+## Project Files
 
-## Why Clients Choose Elizabeth
+- `index.html` - single-page landing page
+- `styles.css` - responsive mobile-first styling
+- `script.js` - small sticky CTA behavior
+- `assets/coastal-hero.png` - coastal hero background
+- `assets/elizabeth-smith-portrait.jpg` - Elizabeth portrait
+- `vercel.json` - Vercel static hosting config
+- `.vercelignore` - prevents docs validation files from taking over the Vercel static deployment
+- `docs.json` - Mintlify-compatible metadata with a valid `mint` theme
+- `.mintignore` - keeps generated zip/folder artifacts out of docs deployment
+- `Assistant.md` - docs page required by the docs navigation
 
-### Negotiation
-Strategic, confident, and focused on protecting your best interests.
+## Important: docs.json
 
-### Marketing
-Elevated marketing designed to make every listing stand out.
+This project includes a valid `docs.json` because the deployment system expects it.
 
-### Communication
-Responsive, transparent, and supportive every step of the way.
+The `theme` value must stay set to `mint`. Valid themes include `mint`, `maple`, `palm`, `willow`, `linden`, `almond`, `aspen`, `luma`, and `sequoia`.
 
-### Results
-Proven success backed by strong sales and satisfied clients.
+For Vercel, the actual public site is still the custom static page at `index.html`. The `.vercelignore` file excludes `docs.json`, `Assistant.md`, and `.mintignore` from the Vercel deployment so the docs page does not replace the QR landing page.
 
-## Awards & Recognition
+The deployable root should contain only:
 
-### Elizabeth Smith
+```text
+assets/
+.gitignore
+.mintignore
+.vercelignore
+Assistant.md
+docs.json
+index.html
+README.md
+script.js
+styles.css
+vercel.json
+```
 
-- 2021-2025: Top Agent Individual, Recognized Year After Year
-- 2021-2025: Top KW Luxury Member, Five Consecutive Years
-- 2021-2022: Double Platinum Production
-- 2023-2025: Platinum Production, Three Consecutive Years
-- 2014: Rookie of the Year; Triple Gold Production
+## Functional Links
 
-### Willis & Smith Group
+- Phone buttons use `tel:+19783020824`
+- Email buttons use `mailto:elizabethsmith@kw.com`
+- Instagram buttons link to `https://www.instagram.com/willisandsmith/`
 
-- 2021-2025: Top Agent Group, Recognized Year After Year
-- 2022-2025: Millionaire Agent Production / Millionaire Agent Group
-- 2021 and 2023: Group Quadruple Platinum Production
-- 2015-2019: Group Double Platinum Production, Five-Year Run
-- 2014: Group Triple Gold Production
+## Deploy to Vercel
 
-## Trusted Network
+### 1. Push Code to GitHub
 
-### Keller Williams
+Create a new GitHub repository, then upload the contents of this folder.
 
-Keller Williams is one of the world's largest real estate brokerages, known for its agent-first culture, industry-leading training, innovative technology, and commitment to delivering exceptional service. With a global network of experienced professionals, Keller Williams helps clients confidently navigate every step of the buying and selling process.
+The repository root should contain:
 
-### Willis & Smith Group
+```text
+index.html
+styles.css
+script.js
+vercel.json
+docs.json
+ASSISTANT.md
+.mintignore
+assets/
+```
 
-The Willis & Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.
+### 2. Connect the Repo to Vercel
 
-## Current Featured Listings
+1. Go to `https://vercel.com`.
+2. Sign in or create an account.
+3. Click `Add New...` then `Project`.
+4. Import the GitHub repository.
+5. Use these exact settings:
+   - Framework Preset: `Other`
+   - Build Command: leave empty
+   - Output Directory: leave empty
+   - Root Directory: `.` or the folder containing `index.html`
+7. Click `Deploy`.
 
-Current Featured Listings are powered by manually entered listing data in `/data/featured-listings.json`. The public website filters for active listings priced at $750,000 or above and hides the section when no listings match.
+If Vercel still tries to run a docs/Next.js build, delete the existing Vercel project and re-import the repo with Framework Preset set to `Other`, or clear the project Build Command in Vercel Project Settings.
 
-## Proven Stats
+### 3. Copy the Live Production URL
 
-- $535M+ Career Sales Volume
-- 1,022 Homes Sold
-- $827K Average Sale Price
-- 103.5% Average Sale-to-List Ratio
+After deployment, Vercel will provide a public HTTPS URL, usually like:
 
-## Review Highlights
+```text
+https://your-project-name.vercel.app
+```
 
-> Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.
->
-> Zillow.com
+Open that URL on a phone and confirm:
 
-> We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.
->
-> Zillow.com
+- The page loads over HTTPS.
+- The portrait image loads.
+- The coastal hero image loads.
+- CSS styling loads.
+- Call and email buttons work.
+- Instagram opens the Willis & Smith Instagram page.
+- The layout looks good at roughly 390px mobile width.
 
-> Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.
->
-> realtor.com
+### 4. Optional: Update Social Preview URL
 
-## Outperforms the Market
+For the best social preview, update these two tags in `index.html` after you know the final production URL:
 
-- List/Sale Avg. Ratio: 104% vs. 98%
-- Avg. List Price: $827K
-- MLS Average: $349,000
-- Advantage: +$478,000
+```html
+<meta property="og:image" content="https://your-project-name.vercel.app/assets/coastal-hero.png">
+<meta name="twitter:image" content="https://your-project-name.vercel.app/assets/coastal-hero.png">
+```
 
-## Contact
+Then commit and redeploy.
 
-Phone: (978) 302-0824  
-Email: elizabethsmith@kw.com  
-Instagram: @ElizabethSmithWS
+### 5. Generate the QR Code
+
+Use the final Vercel production URL, not a localhost URL.
+
+Example QR code target:
+
+```text
+https://your-project-name.vercel.app
+```
+
+Recommended QR code tools:
+
+- `https://www.qr-code-generator.com/`
+- `https://www.canva.com/qr-code-generator/`
+- `https://www.adobe.com/express/feature/image/qr-code-generator`
+
+After creating the QR code, scan it from a phone that is not connected to your computer. The page should open publicly from the Vercel URL.
+
+## Netlify Alternative
+
+You can also deploy this static site to Netlify.
+
+### Drag-and-Drop
+
+1. Go to `https://app.netlify.com/drop`.
+2. Drag this entire folder into the upload area.
+3. Netlify will create a public HTTPS URL.
+4. Use that HTTPS URL for the QR code.
+
+### GitHub Deploy
+
+1. Push this folder to GitHub.
+2. In Netlify, click `Add new site`.
+3. Choose `Import an existing project`.
+4. Select the GitHub repository.
+5. Use these settings:
+   - Build command: leave empty
+   - Publish directory: `.`
+6. Deploy.
+
+## QR Code Checklist
+
+- Do not use `localhost`.
+- Do not use `127.0.0.1`.
+- Do not use a Windows file path.
+- Use the final public HTTPS URL from Vercel or Netlify.
+- Test the QR code from a mobile phone before printing.
