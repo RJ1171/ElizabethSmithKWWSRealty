@@ -139,10 +139,10 @@
             <strong>Individual Honors</strong>
           </div>
           <div class="award-list">
-            <div class="award-year"><span>2021-2025</span><p>Top Agent Individual, Recognized Year After Year</p></div>
+            <div class="award-year"><span>2020-2025</span><p>Top Agent Individual, Recognized Year After Year</p></div>
             <div class="award-year"><span>2021-2025</span><p>Top KW Luxury Member, Five Consecutive Years</p></div>
-            <div class="award-year"><span>2021-2022</span><p>Double Platinum Production</p></div>
-            <div class="award-year"><span>2023-2025</span><p>Platinum Production, Three Consecutive Years</p></div>
+            <div class="award-year"><span>2020-2025</span><p>Double Platinum Production</p></div>
+            <div class="award-year"><span>2020-2025</span><p>Platinum Production</p></div>
             <div class="award-year"><span>2014</span><p>Rookie of the Year; Triple Gold Production</p></div>
           </div>
         </article>
