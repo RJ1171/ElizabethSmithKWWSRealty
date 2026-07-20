@@ -68,6 +68,7 @@ function createListingCard(listing) {
         <div><dt>Sq. Ft.</dt><dd>${formatSquareFeet(listing.squareFeet)}</dd></div>
       </dl>
       <p class="listing-type">${listing.propertyType}${listing.mlsNumber ? ` | MLS ${listing.mlsNumber}` : ""}</p>
+      ${listing.agentName ? `<p class="listing-agent">Listed by ${listing.agentName}</p>` : ""}
       <p class="listing-description">${listing.description}</p>
       <a class="button button--primary listing-button" href="${propertyUrl}" target="_blank" rel="noopener noreferrer">View Property</a>
     </div>

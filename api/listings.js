@@ -1,10 +1,12 @@
 const SOURCE_AGENT_PAGE = "https://willisandsmith.com/agents/elizabeth-smith";
 const GRAPHQL_ENDPOINT = "https://willisandsmith.com/api-gw/graphql";
 const COMPANY_ID = "3b1aa99a-1923-4741-ac63-63eee47210f4";
-const MINIMUM_FEATURED_PRICE = 800000;
+const MINIMUM_FEATURED_PRICE = 0;
 const MAX_FEATURED_LISTINGS = 3;
 const FEATURED_AGENT_NAME = "Elizabeth Smith";
 const FEATURED_PROPERTY_STATUS = "For Sale";
+const FOR_SALE_STATUS_ID = "5f528253-abb7-484e-95c3-330269ac1105";
+const WEBSITE_ID = "55c8f47d-891d-45f2-9c49-cccbbe4996ff";
 
 const PROPERTY_QUERY = `
   query Properties(
@@ -69,16 +71,23 @@ function stripTags(value) {
   return value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function getVariables(agentPageHtml) {
-  const match = agentPageHtml.match(/data-variables="([^"]+)"/);
-  if (!match) throw new Error("Could not find Willis & Smith listing variables.");
-
-  const variables = JSON.parse(decodeHtml(match[1]));
+function getVariables() {
   return {
-    ...variables,
+    sort: "salesPrice",
+    limit: 4,
+    offset: 0,
+    sortDir: "DESC",
+    leaseProperty: false,
     companyId: COMPANY_ID,
-    salesPriceGTE: MINIMUM_FEATURED_PRICE,
-    limit: 80
+    websiteId: WEBSITE_ID,
+    statusIds: [FOR_SALE_STATUS_ID],
+    advancedFilters: {
+      query: {
+        statusIds: {
+          in: [FOR_SALE_STATUS_ID]
+        }
+      }
+    }
   };
 }
 
@@ -93,7 +102,7 @@ function detailUrl(property) {
 function extractAgentName(detailHtml) {
   const agentMatches = [...detailHtml.matchAll(/property-details-tabs-agent__name">\s*([^<]+)\s*</g)]
     .map((match) => stripTags(match[1]));
-  return agentMatches.find((name) => name === FEATURED_AGENT_NAME) || "";
+  return agentMatches[0] || "";
 }
 
 function extractPropertyStatus(detailHtml) {
@@ -177,26 +186,28 @@ async function fetchCandidateProperties(variables) {
 
 module.exports = async function handler(request, response) {
   try {
-    const agentPageHtml = await fetchText(SOURCE_AGENT_PAGE);
-    const variables = getVariables(agentPageHtml);
+    await fetchText(SOURCE_AGENT_PAGE);
+    const variables = getVariables();
     const candidates = await fetchCandidateProperties(variables);
 
     const verified = [];
 
-    for (const property of candidates) {
+    for (const property of candidates.slice(0, 4)) {
       if (property.status !== "FOR_SALE") continue;
-      if (Number(property.salesPrice || 0) < MINIMUM_FEATURED_PRICE) continue;
-
       const propertyDetailHtml = await fetchText(detailUrl(property));
       const listing = normalizeListing(property, propertyDetailHtml);
 
-      if (listing.agentName !== FEATURED_AGENT_NAME) continue;
       if (listing.status !== FEATURED_PROPERTY_STATUS) continue;
 
       verified.push(listing);
     }
 
-    verified.sort((a, b) => b.price - a.price);
+    verified.sort((a, b) => {
+      if (b.price !== a.price) return b.price - a.price;
+      if (a.agentName === FEATURED_AGENT_NAME && b.agentName !== FEATURED_AGENT_NAME) return -1;
+      if (b.agentName === FEATURED_AGENT_NAME && a.agentName !== FEATURED_AGENT_NAME) return 1;
+      return a.address.localeCompare(b.address);
+    });
 
     response.setHeader("Cache-Control", "s-maxage=900, stale-while-revalidate=3600");
     response.status(200).json(verified.slice(0, MAX_FEATURED_LISTINGS));

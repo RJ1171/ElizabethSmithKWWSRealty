@@ -912,6 +912,7 @@ address a {
 
 .listing-location,
 .listing-type,
+.listing-agent,
 .listing-description {
   color: var(--muted);
 }
@@ -956,6 +957,12 @@ address a {
   font-weight: 900;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.listing-agent {
+  margin: -2px 0 12px;
+  font-size: 0.88rem;
+  font-weight: 800;
 }
 
 .listing-description {
