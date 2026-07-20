@@ -7,6 +7,7 @@ const FEATURED_AGENT_NAME = "Elizabeth Smith";
 const FEATURED_PROPERTY_STATUS = "For Sale";
 const FOR_SALE_STATUS_ID = "5f528253-abb7-484e-95c3-330269ac1105";
 const WEBSITE_ID = "55c8f47d-891d-45f2-9c49-cccbbe4996ff";
+const ELIZABETH_SMITH_AGENT_ID = "dade51ef-53e8-4f00-bf84-b7c67a8c4a6c";
 
 const PROPERTY_QUERY = `
   query Properties(
@@ -73,6 +74,7 @@ function stripTags(value) {
 
 function getVariables() {
   return {
+    agentIds: [ELIZABETH_SMITH_AGENT_ID],
     sort: "salesPrice",
     limit: 4,
     offset: 0,
@@ -197,17 +199,13 @@ module.exports = async function handler(request, response) {
       const propertyDetailHtml = await fetchText(detailUrl(property));
       const listing = normalizeListing(property, propertyDetailHtml);
 
+      if (listing.agentName !== FEATURED_AGENT_NAME) continue;
       if (listing.status !== FEATURED_PROPERTY_STATUS) continue;
 
       verified.push(listing);
     }
 
-    verified.sort((a, b) => {
-      if (b.price !== a.price) return b.price - a.price;
-      if (a.agentName === FEATURED_AGENT_NAME && b.agentName !== FEATURED_AGENT_NAME) return -1;
-      if (b.agentName === FEATURED_AGENT_NAME && a.agentName !== FEATURED_AGENT_NAME) return 1;
-      return a.address.localeCompare(b.address);
-    });
+    verified.sort((a, b) => b.price - a.price || a.address.localeCompare(b.address));
 
     response.setHeader("Cache-Control", "s-maxage=900, stale-while-revalidate=3600");
     response.status(200).json(verified.slice(0, MAX_FEATURED_LISTINGS));
