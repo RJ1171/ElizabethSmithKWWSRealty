@@ -39,6 +39,7 @@ function createListingCard(listing) {
   article.dataset.currentImage = "0";
 
   const images = listing.images && listing.images.length ? listing.images : [listing.primaryImage];
+  const propertyUrl = listing.propertyUrl || listing.zillowUrl || "#";
   const galleryButtons = images.length > 1
     ? `
       <button class="gallery-button gallery-button--prev" type="button" data-gallery-prev aria-label="Previous image for ${listing.address}">Prev</button>
@@ -49,7 +50,7 @@ function createListingCard(listing) {
 
   article.innerHTML = `
     <div class="listing-media">
-      <a href="${listing.zillowUrl}" target="_blank" rel="noopener noreferrer" aria-label="View Zillow listing for ${listing.address}">
+      <a href="${propertyUrl}" target="_blank" rel="noopener noreferrer" aria-label="View Willis and Smith property page for ${listing.address}">
         <img src="${listing.primaryImage}" alt="${listing.address}, ${listing.city}, ${listing.state}" loading="lazy" data-gallery-image>
       </a>
       ${listing.badge ? `<span class="listing-badge">${listing.badge}</span>` : ""}
@@ -59,16 +60,16 @@ function createListingCard(listing) {
     </div>
     <div class="listing-content">
       <p class="listing-price">${formatPrice(listing.price)}</p>
-      <h3><a href="${listing.zillowUrl}" target="_blank" rel="noopener noreferrer">${listing.address}</a></h3>
+      <h3><a href="${propertyUrl}" target="_blank" rel="noopener noreferrer">${listing.address}</a></h3>
       <p class="listing-location">${listing.city}, ${listing.state} ${listing.zipCode}</p>
       <dl class="listing-details">
         <div><dt>Beds</dt><dd>${listing.beds}</dd></div>
         <div><dt>Baths</dt><dd>${listing.baths}</dd></div>
         <div><dt>Sq. Ft.</dt><dd>${formatSquareFeet(listing.squareFeet)}</dd></div>
       </dl>
-      <p class="listing-type">${listing.propertyType}</p>
+      <p class="listing-type">${listing.propertyType}${listing.mlsNumber ? ` | MLS ${listing.mlsNumber}` : ""}</p>
       <p class="listing-description">${listing.description}</p>
-      <a class="button button--primary listing-button" href="${listing.zillowUrl}" target="_blank" rel="noopener noreferrer">View Listing</a>
+      <a class="button button--primary listing-button" href="${propertyUrl}" target="_blank" rel="noopener noreferrer">View Property</a>
     </div>
   `;
 
