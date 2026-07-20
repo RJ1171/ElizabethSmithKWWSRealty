@@ -1,250 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis & Smith Group.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Elizabeth Smith | Willis &amp; Smith Group">
-  <meta property="og:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
-  <meta property="og:image" content="/assets/coastal-hero.png">
-  <meta property="og:site_name" content="Elizabeth Smith | Willis &amp; Smith Group">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Elizabeth Smith | Willis &amp; Smith Group">
-  <meta name="twitter:description" content="Trusted real estate guidance, proven results, and local expertise with Elizabeth Smith of Willis &amp; Smith Group.">
-  <meta name="twitter:image" content="/assets/coastal-hero.png">
-  <title>Elizabeth Smith | Willis &amp; Smith Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main>
-    <section class="hero section-red-dots" aria-labelledby="hero-title">
-      <!-- Replace assets/coastal-hero.png with the final coastal/background image from the printed brochure if available. -->
-      <div class="hero__image" role="img" aria-label="Coastal luxury real estate scene"></div>
-      <div class="hero__content">
-        <p class="brand-kicker">Willis &amp; Smith</p>
-        <div class="portrait">
-          <img src="assets/elizabeth-smith-portrait.jpg" alt="Portrait of Elizabeth Smith">
-        </div>
-        <h1 id="hero-title">Elizabeth Smith</h1>
-        <p class="hero__subtitle">Trusted for Results. Known for Relationships.</p>
-        <div class="button-row" aria-label="Primary contact links">
-          <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
-          <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
-          <a class="button button--outline" href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" aria-label="Follow Elizabeth Smith on Instagram">Instagram</a>
-        </div>
-      </div>
-    </section>
+import { ALL_LISTINGS_URL } from "./data/listings.js";
+import { getFeaturedListings, getListings } from "./lib/listings.js";
 
-    <section class="panel intro" aria-labelledby="why-list">
-      <p class="script-label">Why List With Elizabeth</p>
-      <h2 id="why-list">Trusted Guidance With a Personal Touch.</h2>
-      <p>Elizabeth Smith is committed to making every client feel heard, supported, and cared for throughout one of life's biggest decisions by combining trusted guidance, strong market expertise, and a personal approach that builds lasting relationships long after the transaction is complete.</p>
-    </section>
+const stickyCta = document.querySelector(".sticky-cta");
+const closing = document.querySelector(".closing");
 
-    <section class="section" aria-labelledby="about">
-      <div class="card card--center">
-        <p class="eyebrow">About Elizabeth</p>
-        <h2 id="about">Local Expertise. Proven Care.</h2>
-        <p>Elizabeth Smith is a top-producing Realtor and partner of the Willis &amp; Smith Group at Keller Williams Realty, with over $120 million in closed sales and 20+ years of experience serving the North Shore area.</p>
-      </div>
-    </section>
+if (stickyCta && closing && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      stickyCta.style.opacity = entry.isIntersecting ? "0" : "1";
+      stickyCta.style.pointerEvents = entry.isIntersecting ? "none" : "auto";
+    },
+    { threshold: 0.25 }
+  );
 
-    <section class="section partner-section" aria-labelledby="partners">
-      <div class="section-heading">
-        <p class="script-label">Trusted Network</p>
-        <h2 id="partners">Local Care Backed by a Powerful Real Estate Platform.</h2>
-      </div>
-      <div class="partner-grid">
-        <article class="partner-card">
-          <p class="eyebrow">Keller Williams</p>
-          <p>Keller Williams is one of the world's largest real estate brokerages, known for its agent-first culture, industry-leading training, innovative technology, and commitment to delivering exceptional service. With a global network of experienced professionals, Keller Williams helps clients confidently navigate every step of the buying and selling process.</p>
-        </article>
-        <article class="partner-card partner-card--accent">
-          <p class="eyebrow">Willis &amp; Smith Group</p>
-          <p>The Willis &amp; Smith Group is a trusted North Shore and Southern New Hampshire real estate team dedicated to providing expert market knowledge, strategic marketing, and personalized guidance. Backed by Keller Williams, the team is committed to helping clients achieve outstanding results through exceptional service, strong negotiation, and a relationship-first approach.</p>
-        </article>
-      </div>
-    </section>
+  observer.observe(closing);
+}
 
-    <section class="section" aria-labelledby="clients-choose">
-      <div class="section-heading">
-        <p class="script-label">Why Clients Choose Elizabeth</p>
-        <h2 id="clients-choose">A Polished Process From First Conversation to Closing.</h2>
-      </div>
-      <div class="feature-list">
-        <article class="feature-card">
-          <span class="feature-card__icon">01</span>
-          <div>
-            <h3>Negotiation</h3>
-            <p>Strategic, confident, and focused on protecting your best interests.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-card__icon">02</span>
-          <div>
-            <h3>Marketing</h3>
-            <p>Elevated marketing designed to make every listing stand out.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-card__icon">03</span>
-          <div>
-            <h3>Communication</h3>
-            <p>Responsive, transparent, and supportive every step of the way.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-card__icon">04</span>
-          <div>
-            <h3>Results</h3>
-            <p>Proven success backed by strong sales and satisfied clients.</p>
-          </div>
-        </article>
-      </div>
-    </section>
+const currencyFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0
+});
 
-    <section class="trust" aria-label="Review summary">
-      <div class="stars" aria-label="Five star rating">&starf;&starf;&starf;&starf;&starf;</div>
-      <p class="trust__count">Over 300 reviews</p>
-      <p class="trust__source">Via Zillow and Realtor.com</p>
-      <div class="review-quotes" aria-label="Client review highlights">
-        <blockquote>
-          <p>Elizabeth is truly great! She's professional, but very personable. She cares about her clients and makes sure they are supported along the way.</p>
-          <cite>Zillow.com</cite>
-        </blockquote>
-        <blockquote>
-          <p>We've worked with Elizabeth twice now - first when we bought our home, and most recently when we sold it - and both experiences were outstanding.</p>
-          <cite>Zillow.com</cite>
-        </blockquote>
-        <blockquote>
-          <p>Elizabeth moved quickly to provide us with the relevant research to price our home... From the very beginning, Elizabeth exceeded every expectation we had for a real estate agent.</p>
-          <cite>realtor.com</cite>
-        </blockquote>
-      </div>
-    </section>
+const numberFormatter = new Intl.NumberFormat("en-US");
 
-    <section class="section awards-section" aria-labelledby="awards">
-      <div class="section-heading">
-        <p class="script-label">Awards &amp; Recognition</p>
-        <h2 id="awards">A History of Standout Performance.</h2>
-      </div>
-      <div class="awards-board">
-        <article class="award-column">
-          <div class="award-column__header">
-            <span>Elizabeth Smith</span>
-            <strong>Individual Honors</strong>
-          </div>
-          <div class="award-list">
-            <div class="award-year"><span>2020-2025</span><p>Top Agent Individual, Recognized Year After Year</p></div>
-            <div class="award-year"><span>2021-2025</span><p>Top KW Luxury Member, Five Consecutive Years</p></div>
-            <div class="award-year"><span>2020-2025</span><p>Double Platinum Production</p></div>
-            <div class="award-year"><span>2020-2025</span><p>Platinum Production</p></div>
-            <div class="award-year"><span>2014</span><p>Rookie of the Year; Triple Gold Production</p></div>
-          </div>
-        </article>
-        <article class="award-column award-column--group">
-          <div class="award-column__header">
-            <span>Willis &amp; Smith Group</span>
-            <strong>Team Honors</strong>
-          </div>
-          <div class="award-list">
-            <div class="award-year"><span>2021-2025</span><p>Top Agent Group, Recognized Year After Year</p></div>
-            <div class="award-year"><span>2022-2025</span><p>Millionaire Agent Production / Millionaire Agent Group</p></div>
-            <div class="award-year"><span>2021 &amp; 2023</span><p>Group Quadruple Platinum Production</p></div>
-            <div class="award-year"><span>2015-2019</span><p>Group Double Platinum Production, Five-Year Run</p></div>
-            <div class="award-year"><span>2014</span><p>Group Triple Gold Production</p></div>
-          </div>
-        </article>
-      </div>
-    </section>
+function formatPrice(price) {
+  return currencyFormatter.format(price);
+}
 
-    <section class="section stats-section" aria-labelledby="stats">
-      <div class="section-heading">
-        <p class="script-label">Proven Stats</p>
-        <h2 id="stats">Results That Stand Out.</h2>
-      </div>
-      <div class="stat-grid">
-        <article class="stat-card">
-          <strong>$535M+</strong>
-          <span>Career Sales Volume</span>
-          <small>Proven production</small>
-        </article>
-        <article class="stat-card">
-          <strong>1,022</strong>
-          <span>Homes Sold</span>
-          <small>Career total</small>
-        </article>
-        <article class="stat-card">
-          <strong>$827K</strong>
-          <span>Average Sale Price</span>
-          <small>Strong market positioning</small>
-        </article>
-        <article class="stat-card">
-          <strong>103.5%</strong>
-          <span>Average Sale-to-List Ratio</span>
-          <small>Consistently above list</small>
-        </article>
-      </div>
-    </section>
+function formatSquareFeet(squareFeet) {
+  return `${numberFormatter.format(squareFeet)} Sq. Ft.`;
+}
 
-    <section class="section" aria-labelledby="market">
-      <div class="comparison-card">
-        <p class="script-label">Outperforms the Market</p>
-        <h2 id="market">A Measurable Advantage.</h2>
-        <div class="ratio-row">
-          <div>
-            <span>List/Sale Avg. Ratio</span>
-            <strong>104%</strong>
-            <small>Elizabeth</small>
-          </div>
-          <div>
-            <span>Market Avg.</span>
-            <strong>98%</strong>
-            <small>MLS</small>
-          </div>
-        </div>
-        <dl class="market-list">
-          <div>
-            <dt>Avg. List Price</dt>
-            <dd>$827K</dd>
-          </div>
-          <div>
-            <dt>MLS Average</dt>
-            <dd>$349,000</dd>
-          </div>
-          <div class="advantage">
-            <dt>Advantage</dt>
-            <dd>+$478,000</dd>
-          </div>
-        </dl>
+function createListingCard(listing) {
+  const article = document.createElement("article");
+  article.className = "listing-card";
+  article.dataset.listingId = listing.id;
+  article.dataset.currentImage = "0";
+
+  const images = listing.images && listing.images.length ? listing.images : [listing.primaryImage];
+  const propertyUrl = listing.propertyUrl || listing.zillowUrl || "#";
+  const galleryButtons = images.length > 1
+    ? `
+      <button class="gallery-button gallery-button--prev" type="button" data-gallery-prev aria-label="Previous image for ${listing.address}">Prev</button>
+      <button class="gallery-button gallery-button--next" type="button" data-gallery-next aria-label="Next image for ${listing.address}">Next</button>
+      <span class="gallery-count" data-gallery-count>1 / ${images.length}</span>
+    `
+    : `<span class="gallery-count" data-gallery-count>1 / 1</span>`;
+
+  article.innerHTML = `
+    <div class="listing-media">
+      <a href="${propertyUrl}" target="_blank" rel="noopener noreferrer" aria-label="View Willis and Smith property page for ${listing.address}">
+        <img src="${listing.primaryImage}" alt="${listing.address}, ${listing.city}, ${listing.state}" loading="lazy" data-gallery-image>
+      </a>
+      ${listing.badge ? `<span class="listing-badge">${listing.badge}</span>` : ""}
+      <div class="listing-gallery-controls" data-gallery-controls>
+        ${galleryButtons}
       </div>
-    </section>
+    </div>
+    <div class="listing-content">
+      <p class="listing-price">${formatPrice(listing.price)}</p>
+      <h3><a href="${propertyUrl}" target="_blank" rel="noopener noreferrer">${listing.address}</a></h3>
+      <p class="listing-location">${listing.city}, ${listing.state} ${listing.zipCode}</p>
+      <dl class="listing-details">
+        <div><dt>Beds</dt><dd>${listing.beds}</dd></div>
+        <div><dt>Baths</dt><dd>${listing.baths}</dd></div>
+        <div><dt>Sq. Ft.</dt><dd>${formatSquareFeet(listing.squareFeet)}</dd></div>
+      </dl>
+      <p class="listing-type">${listing.propertyType}${listing.mlsNumber ? ` | MLS ${listing.mlsNumber}` : ""}</p>
+      ${listing.agentName ? `<p class="listing-agent">Listed by ${listing.agentName}</p>` : ""}
+      <p class="listing-description">${listing.description}</p>
+      <a class="button button--primary listing-button" href="${propertyUrl}" target="_blank" rel="noopener noreferrer">View Property</a>
+    </div>
+  `;
 
-    <section class="closing section-red-dots" aria-labelledby="closing">
-      <p class="script-label">Ready to Make Your Next Move?</p>
-      <h2 id="closing">Work With a Trusted Local Expert.</h2>
-<div class="button-row">
-        <a class="button button--primary" href="tel:+19783020824">Call Elizabeth</a>
-        <a class="button button--light" href="mailto:elizabethsmith@kw.com">Email Elizabeth</a>
-        <a class="button button--outline" href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <address class="closing-contact">
-        <a href="tel:+19783020824">(978) 302-0824</a>
-        <a href="mailto:elizabethsmith@kw.com">elizabethsmith@kw.com</a>
-        <a href="https://www.instagram.com/elizabethsmithws?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">@ElizabethSmithWS</a>
-      </address>
-    </section>
-  </main>
+  article._listingImages = images;
+  return article;
+}
 
-  <nav class="sticky-cta" aria-label="Sticky contact actions">
-    <a href="tel:+19783020824">Call</a>
-    <a href="mailto:elizabethsmith@kw.com">Email</a>
-  </nav>
+function updateGallery(card, direction) {
+  const images = card._listingImages || [];
+  if (images.length < 2) return;
 
-  <script src="script.js"></script>
-</body>
-</html>
+  const image = card.querySelector("[data-gallery-image]");
+  const count = card.querySelector("[data-gallery-count]");
+  const currentIndex = Number(card.dataset.currentImage || "0");
+  const nextIndex = (currentIndex + direction + images.length) % images.length;
+
+  card.dataset.currentImage = String(nextIndex);
+  image.src = images[nextIndex];
+  count.textContent = `${nextIndex + 1} / ${images.length}`;
+}
+
+async function renderFeaturedListings() {
+  const section = document.querySelector("[data-featured-listings]");
+  const grid = document.querySelector("[data-listings-grid]");
+  const empty = document.querySelector("[data-listings-empty]");
+  const allListingsLink = document.querySelector("[data-all-listings-link]");
+
+  if (!section || !grid || !empty) return;
+
+  const allListings = await getListings();
+  const featuredListings = getFeaturedListings(allListings);
+
+  if (allListingsLink) {
+    allListingsLink.href = ALL_LISTINGS_URL;
+  }
+
+  grid.innerHTML = "";
+
+  if (!featuredListings.length) {
+    empty.hidden = false;
+    grid.hidden = true;
+    return;
+  }
+
+  empty.hidden = true;
+  grid.hidden = false;
+  featuredListings.map(createListingCard).forEach((card) => grid.appendChild(card));
+}
+
+document.addEventListener("click", (event) => {
+  const previous = event.target.closest("[data-gallery-prev]");
+  const next = event.target.closest("[data-gallery-next]");
+
+  if (!previous && !next) return;
+
+  const card = event.target.closest(".listing-card");
+  updateGallery(card, previous ? -1 : 1);
+});
+
+document.addEventListener("keydown", (event) => {
+  const button = event.target.closest("[data-gallery-prev], [data-gallery-next]");
+  if (!button || (event.key !== "Enter" && event.key !== " ")) return;
+
+  event.preventDefault();
+  const card = button.closest(".listing-card");
+  updateGallery(card, button.matches("[data-gallery-prev]") ? -1 : 1);
+});
+
+renderFeaturedListings();
